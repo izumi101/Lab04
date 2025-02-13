@@ -1,4 +1,9 @@
-n= int(input())
-while n>0:
-    print(n,end=" ")
-    n= n-1
+def countdown(n):
+    while n >= 0:
+        yield n
+        n -= 1
+
+n = int(input("Enter a number n: "))
+
+for number in countdown(n):
+    print(number, end=" ")

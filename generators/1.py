@@ -1,3 +1,8 @@
-n= int(input())
-for i in range(1,n+1):
-    print (i ** 2)
+def generate_squares(N):
+    for i in range(1, N+1):
+        yield i ** 2
+
+# Example usage:
+N = int(input("Enter a number N: "))
+for square in generate_squares(N):
+    print(square)
